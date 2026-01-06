@@ -9,6 +9,7 @@ const dashboard = () => {
   const router = useRouter();
 
  useEffect(() => {
+  document.title=" Dashboard - Get me a coffee "
     if (!session) {
       router.push("/login");
     }
@@ -20,3 +21,5 @@ const dashboard = () => {
 };
 
 export default dashboard;
+
+
