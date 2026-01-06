@@ -9,6 +9,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from "react-toastify";
 import {useRouter} from "next/navigation";
+import { notFound } from "next/navigation";
+
 
 const PaymentPage = ({username}) => { 
     // const { data: session } = useSession(); 
@@ -96,7 +98,7 @@ const getData= async()=>{
     var rzp1 = new Razorpay(options);
     rzp1.open();
 }
-
+ 
   return (
     <>
      <ToastContainer
@@ -147,12 +149,12 @@ const getData= async()=>{
               <h2 className='text-2xl font-bold my-5'>Make a Payment</h2>
               <div className="flex gap-2 flex-col">
                 <div>
-                <input onChange={handleChange} value={paymentform.name} name="name" type="text" className='w-full p-3 rounded-lg bg-slate-600' placeholder='Enter Name'  />
+                <input onChange={handleChange} value={paymentform.name || ''} name="name" type="text" className='w-full p-3 rounded-lg bg-slate-600' placeholder='Enter Name'  />
                 </div>
                 <input onChange={handleChange} value={paymentform.message} name="message" type="text" className='w-full p-3 rounded-lg bg-slate-600' placeholder='Enter Message'  />
                 <input onChange={handleChange} value={paymentform.amount} name="amount" type="text" className='w-full p-3 rounded-lg bg-slate-600' placeholder='Enter Amount'  />
                 
-                <button className=' bg-slate-600 p-3  text-white bg-gradient-to-r from-purple-800 to-pink-600 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex justify-center disabled:bg-slate-600 disabled:from-purple-100' disabled={paymentform.name?.length<3 || paymentform.message?.length<4} onClick={()=>pay(paymentform.amount * 100)}>Pay</button>
+                <button className=' bg-slate-600 p-3  text-white bg-gradient-to-r from-purple-800 to-pink-600 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex justify-center disabled:bg-slate-600 disabled:from-purple-100' disabled={paymentform.name?.length<3 || paymentform.message?.length<4 || paymentform.amount?.length < 1} onClick={()=>pay(paymentform.amount * 100)}>Pay</button>
                 
               </div>
               <div className="flex gap-3 mt-5">

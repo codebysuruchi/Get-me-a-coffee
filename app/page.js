@@ -1,14 +1,22 @@
 import React from "react";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
     <>
     <div className="flex flex-col justify-center text-white h-[44vh] items-center">
       <div className="text-3xl font-bold flex gap-3"> Buy Me A Coffee <span className=""><img src="/coffee.gif" width={40}  alt="" /></span> </div>
-      <p>A crowdfunding platform for creators. Get funded by your fans and followers. Start now !</p>
-      <div className="gap-4 py-3">
-        <button type="button" className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Start Now</button>
-        <button type="button" className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Read More</button>
+      <p className="text-center md:text-left py-1.5">A crowdfunding platform for creators to fund their projects.</p>
+      <p className="text-center md:text-left ">
+          A place where your fans can buy you a coffee. Unleash the power of your fans and get your projects funded.
+        </p>
+      <div className="gap-4 py-8">
+         <Link href={"/login"}>
+        <button type="button" className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Start Now</button></Link>
+
+        <Link href="/about">
+        <button type="button" className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Read More</button></Link>
       </div>
     </div>
       <div className="bg-white h-1 opacity-10">

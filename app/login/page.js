@@ -2,6 +2,8 @@
 import React,{useEffect} from "react";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+
 
 const page = () => {
   const { data: session } = useSession();
