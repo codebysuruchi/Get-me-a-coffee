@@ -11,7 +11,7 @@ const Page = () => {
   useEffect(() => {
     document.title="Login-Get me a coffee"
     if (session) {
-      router.push("/dashboard");
+      router.push("/Dashboard");
     }
   }, [session, router]);
 
