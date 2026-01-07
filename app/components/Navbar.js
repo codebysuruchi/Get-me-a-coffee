@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-slate-800 text-white flex justify-between items-center px-4 md:h-24 flex-col md:flex-row">
-      <div ><Link href={"/"} className="logo font-bold text-lg cursor-pointer">GetMeaCoffee 🧋</Link></div>
+      <div ><Link href={"/"} className="logo font-bold text-lg cursor-pointer"><span className="text-xl md:text-base my-4 md:my-0">GetMeaCoffee 🧋</span></Link></div>
       {/* <ul className="flex justify_between gap-4">
             <li>Home</li>
             <li>About</li>
@@ -19,7 +19,7 @@ const Navbar = () => {
             <li>Login</li>
         </ul> */}
 
-      <div className="relative flex flex-col md:flex-row gap-4">
+      <div className="relative flex flex-col md:block gap-4">
         <>
           {session && (
             <>

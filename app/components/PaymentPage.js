@@ -119,9 +119,9 @@ const getData= async()=>{
       
 
       <div className='cover w-full bg-reg-50 relative'>
-      <img className='object-cover w-full h-[400px] ' src={currentUser.coverpic} alt="" />     
-      <div className='absolute top-[79%] right-[45%] '>
-        <img className=' rounded-full object-cover border-[1.5px] border-white w-40 h-40 ' src={currentUser.profilepic} alt="" />
+      <img className='object-cover w-full h-[200px] md:h-[350px] ' src={currentUser.coverpic} alt="" />     
+      <div className='absolute top-[45%] md:top-[76%] right-[37%] md:right-[44%] '>
+        <img className=' rounded-full object-cover border-[1.5px] border-white w-40  h-40 ' src={currentUser.profilepic} alt="" />
       </div>
         </div>    
         <div className="info flex flex-col justify-center items-center my-20 gap-3">
@@ -130,8 +130,8 @@ const getData= async()=>{
            <div className='text-slate-400'>{payments.length} Payments .      ₹ {payments.reduce((a, b) => a + b.amount, 0)} raised
            </div>
 
-           <div className="payments flex gap-3 w-[80%] mt-11">
-            <div className="supporters w-1/2 bg-slate-700 rounded-lg p-10">
+           <div className="payments flex gap-3 w-[80%] mt-11 flex-col md:flex-row">
+            <div className="supporters w-full md:w-1/2 bg-slate-700 rounded-lg p-10">
               {/*Show List of all the supporters as a leaderboard */}
               <h2 className='text-2xl font-bold '>Top 10 Supporters </h2>
               <ul className='mx-5 text-lg'>
@@ -145,7 +145,7 @@ const getData= async()=>{
               </ul>
               </div>
 
-            <div className="makepayment w-1/2 bg-slate-700 rounded-lg p-10">
+            <div className="makepayment w-full md:w-1/2 bg-slate-700 rounded-lg p-10">
               <h2 className='text-2xl font-bold my-5'>Make a Payment</h2>
               <div className="flex gap-2 flex-col">
                 <div>
@@ -157,7 +157,7 @@ const getData= async()=>{
                 <button className=' bg-slate-600 p-3  text-white bg-gradient-to-r from-purple-800 to-pink-600 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex justify-center disabled:bg-slate-600 disabled:from-purple-100' disabled={paymentform.name?.length<3 || paymentform.message?.length<4 || paymentform.amount?.length < 1} onClick={()=>pay(paymentform.amount * 100)}>Pay</button>
                 
               </div>
-              <div className="flex gap-3 mt-5">
+              <div className="flex flex-col md:flex-row gap-3 mt-5">
                 <button className="bg-slate-600 p-3 rounded-lg" onClick={()=>pay(1000)}>pay ₹10</button>
                 <button className="bg-slate-600 p-3 rounded-lg" onClick={()=>pay(2000)}>pay ₹20</button>
                 <button className="bg-slate-600 p-3 rounded-lg" onClick={()=>pay(3000)}>pay ₹30</button>
