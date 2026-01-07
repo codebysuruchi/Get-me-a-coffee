@@ -57,7 +57,7 @@ const getData= async()=>{
   setcurrentUser(u)
   let dbpayments = await fetchPayments(username)
   setPaymentform(dbpayments)
-  console.log(u,dbpayments);
+  
   
 }
 
@@ -133,7 +133,7 @@ const getData= async()=>{
            <div className="payments flex gap-3 w-[80%] mt-11">
             <div className="supporters w-1/2 bg-slate-700 rounded-lg p-10">
               {/*Show List of all the supporters as a leaderboard */}
-              <h2 className='text-2xl font-bold '>Supporters</h2>
+              <h2 className='text-2xl font-bold '>Top 10 Supporters </h2>
               <ul className='mx-5 text-lg'>
                 {payments.length == 0 && <li>No supporters yet. Be the first one!</li>}
                 {payments.map((p,i)=>{

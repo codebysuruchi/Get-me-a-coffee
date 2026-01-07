@@ -13,7 +13,7 @@ const dashboard = () => {
   const [form, setForm] = useState({});
 
   useEffect(() => {
-    console.log(session);
+    
 
     if (!session) {
       router.push("/login");

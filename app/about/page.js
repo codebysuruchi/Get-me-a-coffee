@@ -6,14 +6,14 @@ const About = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
             {/* Hero Section */}
-            <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+            <div className="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] text-white">
                 <div className="container mx-auto px-4 py-16 md:py-24">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="flex justify-center mb-6">
                             <Coffee className="w-16 h-16" />
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold mb-6">About Get Me a Coffee</h1>
-                        <p className="text-xl md:text-2xl text-blue-200 leading-relaxed">
+                        <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
                             A crowdfunding platform designed for creators to fund their projects with the support of their fans. 
                             It's a space where your fans can directly contribute to your creative endeavors by buying you a coffee.
                         </p>
@@ -164,18 +164,18 @@ const About = () => {
             </div>
 
             {/* Call to Action Section */}
-            <div className="bg-gradient-to-r from-blue-900 to-blue-800 py-16">
+            <div className="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]py-16">
                 <div className="container mx-auto px-4 text-center">
-                    <div className="max-w-3xl mx-auto">
-                        <Globe className="w-16 h-16 text-white mx-auto mb-6" />
+                    <div className="max-w-3xl mx-auto ">
+                        <Globe className="w-16 h-16 text-white mx-auto mb-4" />
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Join Our Creative Community</h2>
-                        <p className="text-xl text-blue-200 mb-8">
+                        <p className="text-xl text-gray-300 mb-8">
                             Be part of a community that values creativity, diversity, and inclusivity. 
                             Find encouragement, collaborate on projects, and grow together.
                         </p>
 
                          <Link href={"/login"}>
-                        <button className="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-colors shadow-lg">
+                        <button className="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-colors shadow-lg mb-3">
                             Get Started Today
                         </button></Link>
                     </div>

@@ -9,7 +9,7 @@ const Navbar = () => {
   const [showdropdown, setshowdropdown] = useState(false);
 
   return (
-    <nav className="bg-slate-800 text-white flex justify-between items-center px-4 h-24">
+    <nav className="bg-slate-800 text-white flex justify-between items-center px-4 md:h-24 flex-col md:flex-row">
       <div ><Link href={"/"} className="logo font-bold text-lg cursor-pointer">GetMeaCoffee 🧋</Link></div>
       {/* <ul className="flex justify_between gap-4">
             <li>Home</li>
@@ -19,7 +19,7 @@ const Navbar = () => {
             <li>Login</li>
         </ul> */}
 
-      <div className="relative">
+      <div className="relative flex flex-col md:flex-row gap-4">
         <>
           {session && (
             <>
