@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
           Buy Me A Coffee{" "}
           <span className="">
             <img src="/coffee.gif" width={40} alt="" />
+            {/* <Image src="/coffee.gif" width={40}></Image> */}
           </span>{" "}
         </div>
         <p className="text-center md:text-left py-1.5">
