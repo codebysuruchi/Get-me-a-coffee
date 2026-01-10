@@ -23,10 +23,12 @@ const Navbar = () => {
         <>
           {session && (
             <>
-              <button
-                onClick={() => {
-                  setshowdropdown(!showdropdown);
-                }}
+              <button onClick={() => setshowdropdown(!showdropdown)} onBlur={() => {
+            setTimeout(() => {
+              setshowdropdown(false)
+            }, 100);
+          }}
+              
                 id="dropdownHoverButton"
                 data-dropdown-toggle="dropdownHover"
                 data-dropdown-trigger="hover"
@@ -62,7 +64,7 @@ const Navbar = () => {
                 >
                   <li>
                     <Link 
-                      href={"/Dashboard"} 
+                      href={"/dashboard"} 
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Dashboard

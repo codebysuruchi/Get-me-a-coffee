@@ -15,7 +15,7 @@ const About = () => {
                         <h1 className="text-4xl md:text-5xl font-bold mb-6">About Get Me a Coffee</h1>
                         <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
                             A crowdfunding platform designed for creators to fund their projects with the support of their fans. 
-                            It's a space where your fans can directly contribute to your creative endeavors by buying you a coffee.
+                            It&apos;s a space where your fans can directly contribute to your creative endeavors by buying you a coffee.
                         </p>
                     </div>
                 </div>
