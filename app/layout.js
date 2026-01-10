@@ -6,6 +6,14 @@ import SessionWrappper from "./components/SessionWrappper";
 export const metadata = {
   title: "Get me a coffee - Fund Your projects",
   description: "This website is a crowdfunding plateform for creaators",
+  images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Get Me A Coffee Logo",
+      },
+    ],
 };
 
 export default function RootLayout({ children }) {
